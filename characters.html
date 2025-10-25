@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Characters - Wuthering Waves</title>
+    <link rel="stylesheet" href="./characters.css">
+  </head>
+  <body>
+    <img src='https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_ucLlsikLKEms5AKMW5DTWUT5X1w_LMPT2KlWBkciYvLL6duhnjxt0pyFk4HoJIzdd9rfKxnUa8VaWQztfnOsDFRHAB7UEGeDgxfJjANsRagZ2iFsmqKcOWsAn6iR5bmcxgc1XMFJ1YKB88wObmNAqk=w919-h516-p-k-no-nu' class="bg"/>
+    <img
+      src="./images/black.jpg"
+      alt="dimmer"
+      class="dim"
+    />
+    <img
+      src="./images/4e0889bb750a24cc76c976b032b78f05.png"
+      alt="logo"
+      class="logo"
+    />
+
+    <input type="checkbox" id="menu-checkbox" />
+    <label for="menu-checkbox" class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="navigation">
+      <div class="nav-item">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-item">
+        <a href="overview.html">Overview</a>
+      </div>
+      <div class="nav-item">
+        <a href="characters.html">Characters</a>
+        <div class="dropdown-content">
+          <a href="#resonators">Resonators</a>
+          <a href="#upcoming">Upcoming</a>
+          <a href="#tier-list">Tier List</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#news">News</a>
+        <div class="dropdown-content">
+          <a href="#updates">Updates</a>
+          <a href="#events">Events</a>
+          <a href="#patch-notes">Patch Notes</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#download">Download</a>
+      </div>
+    </nav>
+
+    <div class="content-wrapper">
+      <div class="hero-section">
+        <h1>Resonators</h1>
+        <p>
+          Meet the powerful Resonators of Solaris-3. Each possesses unique
+          abilities and elemental powers to combat the Tacet Discords and
+          protect humanity.
+        </p>
+      </div>
+
+      <div class="filter-section">
+        <h2>Filter by Element</h2>
+        <div class="element-filters">
+          <button class="element-btn active" data-element="all">All</button>
+          <button class="element-btn" data-element="aero">Aero</button>
+          <button class="element-btn" data-element="electro">Electro</button>
+          <button class="element-btn" data-element="fusion">Fusion</button>
+          <button class="element-btn" data-element="glacio">Glacio</button>
+          <button class="element-btn" data-element="havoc">Havoc</button>
+          <button class="element-btn" data-element="spectro">Spectro</button>
+        </div>
+      </div>
+
+      <div id="resonators" class="characters-grid">
+        <div class="character-card" data-element="havoc">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Rover (Havoc)</h3>
+            <span class="element-badge havoc">Havoc</span>
+            <span class="rarity">★★★★★</span>
+            <p>The mysterious protagonist with the power to resonate with multiple frequencies.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="spectro">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Rover (Spectro)</h3>
+            <span class="element-badge spectro">Spectro</span>
+            <span class="rarity">★★★★★</span>
+            <p>Alternative form specializing in Spectro abilities and support.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="fusion">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Changli</h3>
+            <span class="element-badge fusion">Fusion</span>
+            <span class="rarity">★★★★★</span>
+            <p>A powerful martial artist wielding devastating Fusion attacks.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="glacio">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Jinhsi</h3>
+            <span class="element-badge glacio">Glacio</span>
+            <span class="rarity">★★★★★</span>
+            <p>Leader with ice powers and strategic battlefield control.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="electro">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Yinlin</h3>
+            <span class="element-badge electro">Electro</span>
+            <span class="rarity">★★★★★</span>
+            <p>Electro specialist with powerful chain lightning abilities.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="aero">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Jiyan</h3>
+            <span class="element-badge aero">Aero</span>
+            <span class="rarity">★★★★★</span>
+            <p>General commanding wind powers with aerial superiority.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="havoc">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Camellya</h3>
+            <span class="element-badge havoc">Havoc</span>
+            <span class="rarity">★★★★★</span>
+            <p>Mysterious fighter wielding chaotic Havoc energies.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="glacio">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Zhezhi</h3>
+            <span class="element-badge glacio">Glacio</span>
+            <span class="rarity">★★★★★</span>
+            <p>Artist bringing paintings to life with Glacio powers.</p>
+          </div>
+        </div>
+
+        <div class="character-card" data-element="fusion">
+          <div class="character-image">
+            <div class="placeholder-img">Character Image</div>
+          </div>
+          <div class="character-info">
+            <h3>Encore</h3>
+            <span class="element-badge fusion">Fusion</span>
+            <span class="rarity">★★★★★</span>
+            <p>Energetic young girl with explosive Fusion abilities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="upcoming" class="upcoming-section">
+        <h2>Upcoming Resonators</h2>
+        <p class="upcoming-text">
+          Stay tuned for new Resonators arriving in future updates. Each patch
+          brings exciting new characters with unique abilities and playstyles.
+        </p>
+        <div class="upcoming-grid">
+          <div class="upcoming-card">
+            <div class="upcoming-placeholder">Coming Soon</div>
+            <h3>Version 2.0</h3>
+            <p>New limited 5-star Resonator</p>
+          </div>
+          <div class="upcoming-card">
+            <div class="upcoming-placeholder">Coming Soon</div>
+            <h3>Version 2.1</h3>
+            <p>New limited 5-star Resonator</p>
+          </div>
+          <div class="upcoming-card">
+            <div class="upcoming-placeholder">Coming Soon</div>
+            <h3>Version 2.2</h3>
+            <p>New limited 5-star Resonator</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="tier-list" class="tier-section">
+        <h2>Tier List</h2>
+        <p class="tier-disclaimer">
+          This tier list is subjective and based on current meta. All Resonators
+          are viable with proper investment and team composition.
+        </p>
+        <div class="tier-container">
+          <div class="tier-row tier-s">
+            <div class="tier-label">S-Tier</div>
+            <div class="tier-characters">
+              <span>Jiyan</span>
+              <span>Changli</span>
+              <span>Jinhsi</span>
+              <span>Camellya</span>
+            </div>
+          </div>
+          <div class="tier-row tier-a">
+            <div class="tier-label">A-Tier</div>
+            <div class="tier-characters">
+              <span>Yinlin</span>
+              <span>Encore</span>
+              <span>Zhezhi</span>
+            </div>
+          </div>
+          <div class="tier-row tier-b">
+            <div class="tier-label">B-Tier</div>
+            <div class="tier-characters">
+              <span>Rover (Havoc)</span>
+              <span>Rover (Spectro)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
