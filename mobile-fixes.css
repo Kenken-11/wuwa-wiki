@@ -1,0 +1,20 @@
+/* mobile-fixes.css */
+
+/* Styles for focus within on dropdowns */
+.dropdown:focus-within {
+    outline: 2px solid #0056b3; /* Change outline on focus */
+}
+
+/* Touch-friendly styles */
+.dropdown {
+    touch-action: manipulation; /* Prevent default touch behaviors */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+}
+
+dropdown:focus-within .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on focus or hover */
+}
