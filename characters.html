@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Characters - Wuthering Waves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./characters.css"> 
+  <style>
+    .char-card {
+      display: block;
+    }
+
+    #all:target ~ .char-grid .char-card,
+    #aero:target ~ .char-grid .char-card,
+    #electro:target ~ .char-grid .char-card,
+    #fusion:target ~ .char-grid .char-card,
+    #glacio:target ~ .char-grid .char-card,
+    #havoc:target ~ .char-grid .char-card,
+    #spectro:target ~ .char-grid .char-card {
+      display: none;
+    }
+
+    /* Show all when #all is active */
+    #all:target ~ .char-grid .char-card {
+      display: block;
+    }
+
+    /* Show specific element types when their filter is active */
+    #aero:target ~ .char-grid .char-card.filter-aero {
+      display: block;
+    }
+
+    #electro:target ~ .char-grid .char-card.filter-electro {
+      display: block;
+    }
+
+    #fusion:target ~ .char-grid .char-card.filter-fusion {
+      display: block;
+    }
+
+    #glacio:target ~ .char-grid .char-card.filter-glacio {
+      display: block;
+    }
+
+    #havoc:target ~ .char-grid .char-card.filter-havoc {
+      display: block;
+    }
+
+    #spectro:target ~ .char-grid .char-card.filter-spectro {
+      display: block;
+    }
+
+    /* Active button style */
+    .filter-btn {
+      opacity: 0.7;
+    }
+
+    #all:target ~ .filters .filter-btn[href="#all"],
+    #aero:target ~ .filters .filter-btn[href="#aero"],
+    #electro:target ~ .filters .filter-btn[href="#electro"],
+    #fusion:target ~ .filters .filter-btn[href="#fusion"],
+    #glacio:target ~ .filters .filter-btn[href="#glacio"],
+    #havoc:target ~ .filters .filter-btn[href="#havoc"],
+    #spectro:target ~ .filters .filter-btn[href="#spectro"] {
+      background: rgba(0, 212, 255, 0.3);
+      border-color: #00d4ff;
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+    }
+
+    /* Show all by default (no hash or #all) */
+    body:not(:has(:target)) .char-card {
+      display: block;
+    }
+
+    body:not(:has(:target)) .filter-btn[href="#all"] {
+      background: rgba(0, 212, 255, 0.3);
+      border-color: #00d4ff;
+      opacity: 1;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_ucLlsikLKEms5AKMW5DTWUT5X1w_LMPT2KlWBkciYvLL6duhnjxt0pyFk4HoJIzdd9rfKxnUa8VaWQztfnOsDFRHAB7UEGeDgxfJjANsRagZ2iFsmqKcOWsAn6iR5bmcxgc1XMFJ1YKB88wObmNAqk=w919-h516-p-k-no-nu" class="bg" alt="">
+  <img src="./images/black.jpg" class="dim" alt="">
+  <img src="./images/4e0889bb750a24cc76c976b032b78f05.png" class="logo" alt="Wuthering Waves">
+
+  <input type="checkbox" id="menu-checkbox">
+  <label for="menu-checkbox" class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav>
+    <div class="nav-item">
+      <a href="index.html">Home</a>
+    </div>
+    <div class="nav-item">
+      <a href="overview.html">Overview</a>
+    </div>
+    <div class="nav-item">
+      <a href="characters.html">Characters</a>
+      <div class="dropdown">
+        <a href="characters.html#all">Resonators</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#tier-list">Tier List</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#news">News</a>
+      <div class="dropdown">
+        <a href="#updates">Updates</a>
+        <a href="#events">Events</a>
+        <a href="#patch-notes">Patch Notes</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="download.html">Download</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Resonators</h1>
+      <p>Meet the powerful Resonators of Solaris-3. Each possesses unique abilities and elemental powers to combat the Tacet Discords and protect humanity.</p>
+    </section>
+
+    <div id="all"></div>
+    <div id="aero"></div>
+    <div id="electro"></div>
+    <div id="fusion"></div>
+    <div id="glacio"></div>
+    <div id="havoc"></div>
+    <div id="spectro"></div>
+
+    <section class="filters">
+      <h2>Filter by Element</h2>
+      <div class="filter-btns">
+        <a href="#all" class="filter-btn">All</a>
+        <a href="#aero" class="filter-btn">Aero</a>
+        <a href="#electro" class="filter-btn">Electro</a>
+        <a href="#fusion" class="filter-btn">Fusion</a>
+        <a href="#glacio" class="filter-btn">Glacio</a>
+        <a href="#havoc" class="filter-btn">Havoc</a>
+        <a href="#spectro" class="filter-btn">Spectro</a>
+      </div>
+    </section>
+
+    <section class="char-grid">
+      <div class="char-card filter-havoc">
+        <div class="char-img">Character Image</div>
+        <div class="char-info">
+          <h3>Rover (Havoc)</h3>
+          <span class="badge havoc">Havoc</span>
+          <span class="rarity">★★★★★</span>
+          <p>The mysterious protagonist with the power to resonate with multiple frequencies.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-spectro">
+        <div class="char-img"><img src="./char-image/Waves Icon.jpeg" alt=""></div>
+        <div class="char-info">
+          <h3>Rover (Spectro)</h3>
+          <span class="badge spectro">Spectro</span>
+          <span class="rarity">★★★★★</span>
+          <p>Alternative form specializing in Spectro abilities and support.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-fusion">
+        <div class="char-img"><img src="./char-image/Changli_Card.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Changli</h3>
+          <span class="badge fusion">Fusion</span>
+          <span class="rarity">★★★★★</span>
+          <p>A powerful martial artist wielding devastating Fusion attacks.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-glacio">
+        <div class="char-img"><img src="./char-image/Jinhsi_Card.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Jinhsi</h3>
+          <span class="badge glacio">Glacio</span>
+          <span class="rarity">★★★★★</span>
+          <p>Leader with ice powers and strategic battlefield control.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-electro">
+        <div class="char-img"><img src="./char-image/yinlin.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Yinlin</h3>
+          <span class="badge electro">Electro</span>
+          <span class="rarity">★★★★★</span>
+          <p>Electro specialist with powerful chain lightning abilities.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-aero">
+        <div class="char-img"><img src="./char-image/Jiyan_Card.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Jiyan</h3>
+          <span class="badge aero">Aero</span>
+          <span class="rarity">★★★★★</span>
+          <p>General commanding wind powers with aerial superiority.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-havoc">
+        <div class="char-img"><img src="./char-image/Camellya_Card.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Camellya</h3>
+          <span class="badge havoc">Havoc</span>
+          <span class="rarity">★★★★★</span>
+          <p>Mysterious fighter wielding chaotic Havoc energies.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-glacio">
+        <div class="char-img"><img src="./char-image/Zhezhi_Card.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Zhezhi</h3>
+          <span class="badge glacio">Glacio</span>
+          <span class="rarity">★★★★★</span>
+          <p>Artist bringing paintings to life with Glacio powers.</p>
+        </div>
+      </div>
+
+      <div class="char-card filter-fusion">
+        <div class="char-img"><img src="./char-image/Encore_Card.webp" alt=""></div>
+        <div class="char-info">
+          <h3>Encore</h3>
+          <span class="badge fusion">Fusion</span>
+          <span class="rarity">★★★★★</span>
+          <p>Energetic young girl with explosive Fusion abilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcoming" class="upcoming">
+      <h2>Upcoming Resonators</h2>
+      <p class="upcoming-text">Stay tuned for new Resonators arriving in future updates. Each patch brings exciting new characters with unique abilities and playstyles.</p>
+      <div class="upcoming-grid">
+        <div class="upcoming-card">
+          <div class="upcoming-placeholder">Coming Soon</div>
+          <h3>Version 2.0</h3>
+          <p>New limited 5-star Resonator</p>
+        </div>
+        <div class="upcoming-card">
+          <div class="upcoming-placeholder">Coming Soon</div>
+          <h3>Version 2.1</h3>
+          <p>New limited 5-star Resonator</p>
+        </div>
+        <div class="upcoming-card">
+          <div class="upcoming-placeholder">Coming Soon</div>
+          <h3>Version 2.2</h3>
+          <p>New limited 5-star Resonator</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tier-list" class="tier">
+      <h2>Tier List</h2>
+      <p class="tier-note">This tier list is subjective and based on current meta. All Resonators are viable with proper investment and team composition.</p>
+      
+      <div class="tier-row tier-s">
+        <div class="tier-label">S-Tier</div>
+        <div class="tier-chars">
+          <span>Jiyan</span>
+          <span>Changli</span>
+          <span>Jinhsi</span>
+          <span>Camellya</span>
+        </div>
+      </div>
+
+      <div class="tier-row tier-a">
+        <div class="tier-label">A-Tier</div>
+        <div class="tier-chars">
+          <span>Yinlin</span>
+          <span>Encore</span>
+          <span>Zhezhi</span>
+        </div>
+      </div>
+
+      <div class="tier-row tier-b">
+        <div class="tier-label">B-Tier</div>
+        <div class="tier-chars">
+          <span>Rover (Havoc)</span>
+          <span>Rover (Spectro)</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
